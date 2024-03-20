@@ -44,8 +44,3 @@ def det_by_echelon_form(matrix):
     '''Returns the determinant of a matrix by converting it to echelon form'''
     echelon_matrix = echelon_form(matrix)
     return multiply_primary_diagonal(echelon_matrix)
-
-
-matrix = [[0,2,3],[4,0,6],[7,0,9]]
-print(echelon_form(matrix))
-print(det_by_echelon_form(matrix))
