@@ -24,11 +24,11 @@ def echelon_form(matrix):
 
             pivot = matrix[i][i]
             if pivot == 0:
-                '''If the pivot is zero, we need to swap the rows'''
+                '''If the pivot is 0, swap the row with the next row and multiply the next row by -1'''
                 matrix = swap_rows(matrix,i,i+1)
                 matrix[i] = multiply_row(matrix[i],-1)
-                
                 continue
+            
             i_element_next_row = matrix[j][i]
             multiplier = inverse_multiplier(pivot,i_element_next_row)
             matrix[j] = add_row(matrix[j],multiply_row(matrix[i],multiplier))
