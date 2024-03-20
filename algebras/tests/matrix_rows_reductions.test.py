@@ -24,6 +24,9 @@ class TestMatrixRowReductions(unittest.TestCase):
     def test_echelon_form(self):
         self.assertEqual(echelon_form([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), [[1, 2, 3], [0, -3, -6], [0, 0, 0]])
 
+    def test_echelon_form_with_first_zero(self):
+        self.assertEqual(echelon_form([[0, 2, 3], [4, 5, 6], [7, 8, 9]]), [[-4, -5, -6], [0, 2, 3], [0, 0, -3/8]])
+
     def test_multiply_primary_diagonal(self):
         self.assertEqual(multiply_primary_diagonal([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), 45)
 
