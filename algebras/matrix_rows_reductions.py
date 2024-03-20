@@ -34,7 +34,7 @@ def echelon_form(matrix):
             matrix[j] = add_row(matrix[j],multiply_row(matrix[i],multiplier))
     return matrix
 
-def multuply_primary_diagonal(matrix):
+def multiply_primary_diagonal(matrix):
     product = 1
     for i in range(len(matrix)):
         product *= matrix[i][i]
@@ -43,9 +43,9 @@ def multuply_primary_diagonal(matrix):
 def det_by_echelon_form(matrix):
     '''Returns the determinant of a matrix by converting it to echelon form'''
     echelon_matrix = echelon_form(matrix)
-    return multuply_primary_diagonal(echelon_matrix)
+    return multiply_primary_diagonal(echelon_matrix)
 
 
-matrix = [[1,2,3],[4,0,6],[7,6,9]]
+matrix = [[0,2,3],[4,0,6],[7,0,9]]
 print(echelon_form(matrix))
 print(det_by_echelon_form(matrix))
