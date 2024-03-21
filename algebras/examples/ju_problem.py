@@ -5,14 +5,12 @@ from algebras.matrix_rows_reductions import echelon_form, det_by_echelon_form
 import numpy as np
 
 rule = "2*i if i >= j, -j if j > i"
-matrix_4_4 = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
-
-
+matrix = [[0 for i in range(4)] for i in range(4)]
 
 def print_matrix(matrix):
     print(np.array2string(matrix, separator=', ', formatter={'all': lambda x: "\t"+ str(x)}))
 
-matrix = create_matrix_by_rule(matrix_4_4, rule)
+matrix = create_matrix_by_rule(matrix, rule)
 print("Matrix by rule: ")
 print_matrix(np.array(matrix))
 print("\nEchelon form: ")
