@@ -4,8 +4,8 @@ from algebras.matrix_creation_by_rule import get_rules, get_conditions, get_valu
 from algebras.matrix_rows_reductions import echelon_form, det_by_echelon_form
 import numpy as np
 
-rule = "2*i if i >= j, -j if j > i"
-matrix = [[0 for i in range(4)] for i in range(4)]
+rule = "5 * i - j  if i == j, 2*i  if i > j, -j if j > i"
+matrix = [[0 for i in range(7)] for i in range(7)]
 
 def print_matrix(matrix):
     print(np.array2string(matrix, separator=', ', formatter={'all': lambda x: "\t"+ str(x)}))
